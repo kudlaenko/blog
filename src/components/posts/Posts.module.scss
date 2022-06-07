@@ -1,0 +1,54 @@
+.block {
+    display: flex;
+
+    &:first-child {
+        width: 68%;
+
+        @media (max-width: 659px) {
+            width: 100%;
+        }
+    }
+
+    &:last-child {
+        display: flex;
+        flex-direction: column;
+        width: 32%;
+
+        @media (min-width: 660px) and (max-width: 1259px) {
+            flex-flow: row wrap;
+        }
+    }
+
+    .item {
+        display: flex;
+
+        &:first-child {
+            width: 62%;
+
+            @media (min-width: 660px) and (max-width: 1259px) {
+                width: 65%;
+            }
+        }
+
+        &:last-child {
+            display: flex;
+            flex-direction: column;
+            width: 38%;
+            height: 100%;
+
+            @media (min-width: 660px) and (max-width: 1259px) {
+                width: 35%;
+            }
+
+            @media (max-width: 659px) {
+                width: 100%;
+            }
+        }
+    }
+
+    &:first-child, &:last-child {
+        @media (min-width: 660px) and (max-width: 1259px) {
+            width: 100%;
+        }
+    }
+}
